@@ -7,6 +7,7 @@ jadwal_shalat = function(kota){
 		}).fail(() => {
 			d = {'error': true};
 		});
+                alert(d);
 		if(d.error !== true){
 			card.append(`<div style="text-align:center;padding-top:5%;"><span class="label label-success">${kota}</span></div>`);
 			var o = $(`<div class="bg-gray" style="text-align:center;"></div>`);
