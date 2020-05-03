@@ -24,7 +24,6 @@ jadwal_shalat = function(kota){
 }
 
 
-
 $(document).ready(() => {
 	var data_surah;
 
