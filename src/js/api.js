@@ -1,13 +1,13 @@
 jadwal_shalat = function(kota){
 		var d, card = $(`div[style^=margin-top].card:eq(0)`).find(`div.card-body`);
 		card.find(`div[style^=text-align]:eq(0),div.bg-gray:eq(0)`).remove();
-		$.ajax(
+		/*$.ajax(
 			`http://api.aladhan.com/v1/timingsByCity?city=${kota}&country=Indonesia&method=8`, {method: `GET`, async:false}).done((data) => {
 			d = data.data.timings;
 		}).fail(() => {
 			d = {'error': true};
 		});
-                
+                */
 		if(d.error !== true){
 			card.append(`<div style="text-align:center;padding-top:5%;"><span class="label label-success">${kota}</span></div>`);
 			var o = $(`<div class="bg-gray" style="text-align:center;"></div>`);
