@@ -2,7 +2,7 @@ jadwal_shalat = function(kota){
 		var d, card = $(`div[style^=margin-top].card:eq(0)`).find(`div.card-body`);
 		card.find(`div[style^=text-align]:eq(0),div.bg-gray:eq(0)`).remove();
 		$.ajax({
-			url: `http://api.aladhan.com/v1/timingsByCity?city=${kota}&country=Indonesia&method=8`, method: `GET`, async:false, headers: {'Host': 'api.aladhan.com','User-Agent': 'Mozilla/5.0','Accept': '*/*'}}).done((data) => {
+			url: `http://api.aladhan.com/v1/timingsByCity?city=${kota}&country=indonesia&method=8`, method: `GET`, async:false, headers: {'Host': 'api.aladhan.com','User-Agent': 'Mozilla/5.0','Accept': '*/*'}}).done((data) => {
 			d = data.data.timings;
 		}).fail(() => {
 			d = {'error': true};
@@ -30,11 +30,11 @@ $(document).ready(() => {
 	$(`div.card:eq(0)`).animate({marginTop: `10%`});
 
 	$(`div[style^=margin-top].card:eq(0)`).find(`div.card-body`).append(() => {
-		jadwal_shalat('Majene'); return '';
+		jadwal_shalat('majene'); return '';
 	});
 	$(`button:has(i.icon-search):eq(0)`).click(() => {
 		var kota = $(`input[placeholder=Jakarta]`).val();
-		jadwal_shalat($.trim(kota));
+		jadwal_shalat($.trim(kota).toLowerCase());
 	});
 	$(`button:contains(AL-QUR'AN)`).click(() =>{
 		$(`div.card:eq(0),div[style^=margin-top].card`).hide();
