@@ -1,3 +1,5 @@
-# quran
+# Qur-an
 
-[view](https://ikbal-hanafi.github.io/quran/)
+Simple web app Al-Qur'an
+
+[!ss](/gambar.png)
