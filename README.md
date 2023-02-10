@@ -2,4 +2,4 @@
 
 Simple web app Al-Qur'an
 
-[!ss](/gambar.png)
+[![ss](/gambar.png)](/gambar.png)
